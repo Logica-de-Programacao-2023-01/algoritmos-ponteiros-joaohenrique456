@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func carlao(ptr *bool) {
+	*ptr = !(*ptr)
+}
+func main() {
+	carlos := true
+
+	fmt.Println("Carlos antes era:", carlos)
+	carlao(&carlos)
+	fmt.Println("Agora Carlos é:", carlos)
+}

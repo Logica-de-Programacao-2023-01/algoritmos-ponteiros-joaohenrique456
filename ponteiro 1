@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+type Valor struct {
+	age int
+}
+
+func changeAge(p *Valor, newvalor int) {
+
+	p.age = newvalor
+}
+
+func main() {
+	a := Valor{18}
+	b := Valor{23}
+	aux := a
+	fmt.Println("Valor de a e valor de b são: ", a, b)
+
+	fmt.Println("Valor de a agora é o de b: ", b)
+
+	fmt.Println("Valor de b agora é o de a: ", aux)
+
+}
+

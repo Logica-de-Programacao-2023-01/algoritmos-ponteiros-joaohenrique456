@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+type Estoque struct {
+	nome       string
+	preco      int
+	quantidade int
+}
+
+func Valoro(p *Estoque, newValor int) {
+	p.preco = newValor
+}
+
+func main() {
+	carlos := Estoque{nome: "gutoshake", preco: 150, quantidade: 20}
+	fmt.Println("Preço antigo: ", carlos)
+
+	Valoro(&carlos, 145)
+	fmt.Println("Novo preço é de: ", carlos)
+}
